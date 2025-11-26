@@ -45,18 +45,22 @@ def num_check (question):
 
 # Work out factors, return sorted list
 def factor(var_to_factor):
-    import random
+
 
     all_numbers = []
+    
+    # Square root the number to work out when to stop looping
+    stop = to_factor ** 0.5
+    stop = int(stop)
 
-    for item in range(0, 5):
+    for item in range(1, stop+1):
 
         # check if number is a factor
         if var_to_factor % item == 0:
             all_numbers.append(item)
 
     all_numbers.sort()
-    print(all_numbers)
+    return all_numbers
 
 
 
